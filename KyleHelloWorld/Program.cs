@@ -20,6 +20,10 @@ namespace KyleHelloWorld
 			bodyParts.Add("Arm", 50);
 			bodyParts.Add("Leg", 75);
 
+			Console.WriteLine("Kyle Text Shooter");
+			Console.WriteLine("press any key to start");
+			Console.ReadKey();
+
 			while (true) //this is the main game loop
 			{
 				Console.WriteLine("Who do you want to shoot? Remaining players: " + string.Join(", ", players.Select(p => p.Name)));
