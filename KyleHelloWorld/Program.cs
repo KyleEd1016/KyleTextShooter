@@ -20,7 +20,7 @@ namespace KyleHelloWorld
 			bodyParts.Add("Arm", 50);
 			bodyParts.Add("Leg", 75);
 
-			while (true)
+			while (true) //this is the main game loop
 			{
 				Console.WriteLine("Who do you want to shoot? Remaining players: " + string.Join(", ", players.Select(p => p.Name)));
 				string shotPerson = Console.ReadLine();
@@ -39,7 +39,8 @@ namespace KyleHelloWorld
 				{
 					Console.WriteLine("You didn't shoot anyone.");
 				}
-				else {
+				else
+				{
 					shotPlayer.Health = shotPlayer.Health - bodyParts[shotBodyPart];
 					Console.WriteLine($"You shot {shotPlayer.Name}. They have {shotPlayer.Health}% health remaining.");
 					if (shotPlayer.Health <= 0)
