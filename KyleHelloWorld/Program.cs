@@ -28,6 +28,12 @@ namespace KyleHelloWorld
 				Console.WriteLine("What body part do you want to shoot?");
 				string shotBodyPart = Console.ReadLine();
 
+				if (bodyParts.ContainsKey(shotBodyPart) == false)
+				{
+					Console.WriteLine("Invalid body part.");
+					continue;
+				}
+
 				var shotPlayer = players.SingleOrDefault(p => p.Name.ToUpper() == shotPerson.ToUpper());
 				if (shotPlayer == null)
 				{
