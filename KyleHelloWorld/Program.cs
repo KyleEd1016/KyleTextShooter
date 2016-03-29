@@ -9,7 +9,6 @@ namespace KyleHelloWorld
 		//This is the main function that executes by default in a console application
 		public static void Main()
 		{
-
 			//This is going to be all the players in the system
 			List<Player> players = new List<Player>
 			{
